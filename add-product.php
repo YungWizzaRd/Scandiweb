@@ -11,11 +11,11 @@
   
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">Product</h5>
-    <a class="button" type="submit">Save</a>
-    <a class="p-2 text-dark" href="../Scandiweb/">Cancel</a>
+    <button type="submit" class="btn" form="#product_form">Save</button>
+    <button class="btn"><a href="../Scandiweb/" class='p-2 text-dark' >Cancel</a></button>
   </div>
   <div>
-    <form action="save.php" method="post" name="#product_form">
+    <form action="save.php" method="post" id="#product_form">
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">SKU</label>
         <div class="col-sm-5">     
@@ -26,14 +26,14 @@
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Name</label>
         <div class="col-sm-5"> 
-          <input type="text" name="#name">
+          <input type="text" id="#name">
         </div>
       </div>
         <br>
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Price($)</label>  
         <div class="col-sm-5">
-          <input type="text" name="#price">
+          <input type="text" id="#price">
         </div>
       </div>
       <div class>
