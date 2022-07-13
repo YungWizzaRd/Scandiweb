@@ -19,7 +19,7 @@
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">SKU</label>
         <div class="col-sm-5">     
-          <input type="text" name="#sku)">
+          <input type="text" id="#sku">
         </div>
       </div>
         <br>
@@ -36,8 +36,8 @@
           <input type="text" id="#price">
         </div>
       </div>
-      <div class>
+      <div >
     </form>
   </div>
 </body>
-</html>
+</html>   
