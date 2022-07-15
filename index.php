@@ -1,3 +1,9 @@
+<?php
+include './includes/db.inc.php';
+include './includes/product.inc.php';
+include './includes/view_product.inc.php'
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +15,9 @@
     
 </head>
 <body>
-    
+    <?php
+    $product= new ViewProduct();
+    $product->showProductData();
+    ?>
 </body>
 </html>
