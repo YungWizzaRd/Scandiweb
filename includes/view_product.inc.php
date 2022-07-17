@@ -4,7 +4,8 @@ class ViewProduct extends product{
 
     public function showProductData(){
         $datas = $this->getProductData();
-        foreach ($datas as $data) {
+        if($datas){
+         foreach ($datas as $data) {
             echo $data['SKU'];
             echo $data['Name'];
             echo $data['Price'];
@@ -19,6 +20,7 @@ class ViewProduct extends product{
                 echo $data['Furniture LengtH'];
             }
             echo "<br />";
+            }
         }
     }
     
