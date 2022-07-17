@@ -1,3 +1,6 @@
+<?php
+  require_once 'includes/db.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,30 +14,33 @@
   
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">Product</h5>
-    <button type="submit" class="btn" form="#product_form">Save</button>
+   <button type="submit" form="#product_form" class="btn">Save</button>
     <button class="btn"><a href="../Scandiweb/" class='p-2 text-dark' >Cancel</a></button>
   </div>
   <div>
-    <form action="save.php" method="post" id="#product_form">
+    <form action="includes/save.inc.php" method="post" id="#product_form">
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">SKU</label>
         <div class="col-sm-5">     
-          <input type="text" id="#sku">
+          <input type="text" name="sku" id="#sku"> 
         </div>
       </div>
         <br>
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Name</label>
         <div class="col-sm-5"> 
-          <input type="text" id="#name">
+          <input type="text" name="name" id="#name">
         </div>
       </div>
         <br>
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Price($)</label>  
         <div class="col-sm-5">
-          <input type="text" id="#price">
+          <input type="text" name="price" id="#price">
         </div>
+      </div>
+      <div>
+         
       </div>
       <div >
     </form>

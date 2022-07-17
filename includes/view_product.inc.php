@@ -18,6 +18,7 @@ class ViewProduct extends product{
                 echo $data['Furniture Width'];
                 echo $data['Furniture LengtH'];
             }
+            echo "<br />";
         }
     }
     
