@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
+
       <title>Add-product</title>
 </head>
 <body>
@@ -44,7 +44,7 @@
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Type Switcher</label>  
         <div class="col-sm-5">
-          <select type="text" name="productType" id="#productType">
+          <select type="text" name="productType" id="#productType" onchange="select(this.value)">
             <option >DVD</option>
             <option >Furniture</option>
             <option >Book</option>
@@ -52,7 +52,7 @@
         </div>
       </div>
       <br>
-      <div id="DVD">
+      <div id="DVD" >
       <div class="form-group row" >
         <label class="col-sm-1 col-form-label">Size(MB)</label>  
         <div class="col-sm-5">
@@ -60,7 +60,7 @@
         </div>
       </div>
       </div>
-      <div id="Book">
+      <div id="Book" class="d-none">
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Weight(KG)</label>  
         <div class="col-sm-5">
@@ -69,43 +69,30 @@
       </div>
       </div>
       <div id="Furniture" class="d-none">
-      <div class="form-group row" >
-        <label class="col-sm-1 col-form-label">Height</label>  
+        <div class="form-group row" >
+          <label class="col-sm-1 col-form-label">Height</label>  
         <div class="col-sm-5">
           <input type="text" name="height" id="#height">
         </div>
-      </div>
-      <div class="form-group row" >
+        </div>
+        <div div class="form-group row" >
         <label class="col-sm-1 col-form-label">Width</label>  
         <div class="col-sm-5">
           <input type="text" name="width" id="#width">
         </div>
-      </div>
-      <div class="form-group row" >
+        </div>
+        <div class="form-group row" >
         <label class="col-sm-1 col-form-label">Length</label>  
         <div class="col-sm-5">
           <input type="text" name="length" id="#length">
         </div>
       </div>
-      </div>  
-      <script>
-    if(document.getElementById("#productType").value = "Book"){
-        $("#Book").toggleClass('d-none');
-        $("#DVD").removeClass('d-none');
-        $("#Furniture").removeClass('d-none');
-    }
-    else if(document.getElementById("#productType").value = "Furniture"){
-      $("#Book").removeClass('d-none');
-        $("#DVD").removeClass('d-none');
-        $("#Furniture").addClass('d-none');
-        
-    }else if (document.getElementById("#productType").value = "DVD"){
-        $("#Book").removeClass('d-none');
-        $("#DVD").addClass('d-none');
-        $("#Furniture").removeClass('d-none');
-    }</script>
+    </div>  
+     
     </form>
+ 
+  
   </div>
-
+<script src="js/scripts.js"></script>
 </body>
 </html>   

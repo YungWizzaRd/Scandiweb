@@ -11,13 +11,13 @@ class ViewProduct extends product{
             echo $data['Price'];
             echo $data['productType'];
             if ($data['productType']=='DVD') {
-                echo $data['DVD size'];
+                echo $data['DVDsize'];
             } elseif ($data['productType']=='Book') {
-                echo $data['Book Weight	'];
+                echo $data['BookWeight'];
             } elseif ($data['productType']=='Furniture') {
-                echo $data['Furniture Height'];
-                echo $data['Furniture Width'];
-                echo $data['Furniture LengtH'];
+                echo $data['FurnitureHeight'];
+                echo $data['FurnitureWidth'];
+                echo $data['FurnitureLength'];
             }
             echo "<br />";
             }
