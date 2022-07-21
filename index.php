@@ -20,11 +20,11 @@ include './includes/delete.inc.php';
 
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">Product list</h5>
-       <button class="btn"><a href="../Scandiweb/add-product" class='p-2 text-dark' >ADD</a></button>
+       <button class="btn"><a href="add-product.php" class='p-2 text-dark' >ADD</a></button>
         <button type="submit" form="delete_form" name="delete_btn" class="btn">MASS DELETE</button>
   </div>
  
-  </div class=form>
+ 
   <form action="<?php $delete->delete()?>" method="POST" id="delete_form" >
     <?php
     
@@ -32,7 +32,7 @@ include './includes/delete.inc.php';
     $product->showProductData();
     ?>
     </form>
-  </div>
+
 </body>
 
 </html>

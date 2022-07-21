@@ -28,7 +28,7 @@ class save extends DB
                 $this->addError('data','Please, submit required data');
                 
 
-            } elseif(!is_int($Price)){
+            } elseif(!is_numeric($Price)){
 
                 $this->addError('price','Price should be written as number!');
 
@@ -50,23 +50,24 @@ class save extends DB
 
                         $this->addError('data','Please, submit required data');
                        
-                    } elseif(!is_int($Weight)){
-
-                        $this->addError('weight','Weight should be written as number!');
+                    } elseif(!is_numeric($Weight)){
+                         $this->addError('weight','Weight should be written as number!');
         
                     }else{
                         
+                       
                         $sql = "INSERT INTO product_form (SKU, Name, Price, productType , BookWeight) VALUES ('$SKU', '$Name', '$Price', '$ProductType', '$Weight');";
                         mysqli_query($this->connect(), $sql);
 
                         header("Location: ./");
+                        
                     }
                 } elseif ($ProductType==="Furniture") {
                     if (empty($Height)||empty($Width)||empty($Length)) {
 
                         $this->addError('data','Please, submit required data');
                         
-                    }elseif(!is_int($Weight)||!is_int($Length)||!is_int($Height)){
+                    }elseif(!is_numeric($Width)||!is_numeric($Length)||!is_numeric($Height)){
 
                         $this->addError('furniture','Furniture sizes should be written as number!');
         
@@ -90,3 +91,4 @@ class save extends DB
         $this->errors[$key]=$val;
     }
 }
+?>

@@ -19,11 +19,11 @@ include './includes/db.inc.php';
   
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">Product</h5>
-   <button type="submit" form="#product_form" name="save_btn" class="btn">Save</button>
-    <button class="btn"><a href="../Scandiweb/" class='p-2 text-dark' >Cancel</a></button>
+   <button type="submit" form="product_form" name="save_btn" class="btn">Save</button>
+    <button class="btn"><a href="./" class='p-2 text-dark' >Cancel</a></button>
   </div>
   <div>
-    <form action="<?php $save->save()?>" method="post" id="#product_form">
+    <form action="<?php $save->save()?>" method="post" id="product_form">
         <p class="text-danger"><?php if(isset($errors['data'])) echo $errors['data'];?></p>
         <p class="text-danger"><?php if(isset($errors['SKU'])) echo $errors['SKU'];?></p>
         <p class="text-danger"><?php if(isset($errors['price'])) echo $errors['price'];?></p>
@@ -33,27 +33,27 @@ include './includes/db.inc.php';
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">SKU</label>
         <div class="col-sm-5">     
-          <input type="text" name="sku" id="#sku"> 
+          <input type="text" name="sku" id="sku"> 
         </div>
       </div>
         <br>
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Name</label>
         <div class="col-sm-5"> 
-          <input type="text" name="name" id="#name">
+          <input type="text" name="name" id="name">
         </div>
       </div>
         <br>
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Price($)</label>  
         <div class="col-sm-5">
-          <input type="text" name="price" id="#price">
+          <input type="text" name="price" id="price">
         </div>
       </div>
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Type Switcher</label>  
         <div class="col-sm-5">
-          <select type="text" name="productType" id="#productType" onchange="select(this.value)">
+          <select type="text" name="productType" id="productType" onchange="select(this.value)">
             <option >DVD</option>
             <option >Furniture</option>
             <option >Book</option>
@@ -67,7 +67,7 @@ include './includes/db.inc.php';
         
         <label class="col-sm-1 col-form-label">Size(MB)</label>  
         <div class="col-sm-5">
-          <input type="text" name="size" id="#size">
+          <input type="text" name="size" id="size">
         </div>
       </div>
       </div>
@@ -76,7 +76,7 @@ include './includes/db.inc.php';
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Weight(KG)</label>  
         <div class="col-sm-5">
-          <input type="text" name="weight" id="#weight">
+          <input type="text" name="weight" id="weight">
         </div>
       </div>
       </div>
@@ -85,19 +85,19 @@ include './includes/db.inc.php';
         <div class="form-group row" >
           <label class="col-sm-1 col-form-label">Height</label>  
         <div class="col-sm-5">
-          <input type="text" name="height" id="#height">
+          <input type="text" name="height" id="height">
         </div>
         </div>
         <div div class="form-group row" >
         <label class="col-sm-1 col-form-label">Width</label>  
         <div class="col-sm-5">
-          <input type="text" name="width" id="#width">
+          <input type="text" name="width" id="width">
         </div>
         </div>
         <div class="form-group row" >
         <label class="col-sm-1 col-form-label">Length</label>  
         <div class="col-sm-5">
-          <input type="text" name="length" id="#length">
+          <input type="text" name="length" id="length">
         </div>
       </div>
     </div>  
