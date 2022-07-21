@@ -15,7 +15,7 @@ class ViewProduct extends product{
            <table class="table col-sm-3 text-center table border table-borderless m-3">
             <tr>
             
-                <td><input type="checkbox" class=".delete-checkbox"></td>
+                <td><input type="checkbox" class=".delete-checkbox" name="delete_checkboxes[]" value="<?=$data['ID'];?>"></td>
                 <td><?=$data['SKU'];?> </td>
   
             </tr>

@@ -1,5 +1,8 @@
 <?php
-  require_once 'includes/db.inc.php';
+include './includes/db.inc.php';
+  include './includes/save.inc.php';
+  $save=new save();
+  $errors=$save->save();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,11 +19,17 @@
   
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">Product</h5>
-   <button type="submit" form="#product_form" class="btn">Save</button>
+   <button type="submit" form="#product_form" name="save_btn" class="btn">Save</button>
     <button class="btn"><a href="../Scandiweb/" class='p-2 text-dark' >Cancel</a></button>
   </div>
   <div>
-    <form action="includes/save.inc.php" method="post" id="#product_form">
+    <form action="<?php $save->save()?>" method="post" id="#product_form">
+        <p class="text-danger"><?php if(isset($errors['data'])) echo $errors['data'];?></p>
+        <p class="text-danger"><?php if(isset($errors['SKU'])) echo $errors['SKU'];?></p>
+        <p class="text-danger"><?php if(isset($errors['price'])) echo $errors['price'];?></p>
+        <p class="text-danger"><?php if(isset($errors['size'])) echo $errors['size'];?></p>
+        <p class="text-danger"><?php if(isset($errors['weight'])) echo $errors['weight'];?></p>
+        <p class="text-danger"><?php if(isset($errors['furniture'])) echo $errors['furniture'];?></p>
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">SKU</label>
         <div class="col-sm-5">     
@@ -53,7 +62,9 @@
       </div>
       <br>
       <div id="DVD" >
+        <p>Please, provide size:</p>
       <div class="form-group row" >
+        
         <label class="col-sm-1 col-form-label">Size(MB)</label>  
         <div class="col-sm-5">
           <input type="text" name="size" id="#size">
@@ -61,6 +72,7 @@
       </div>
       </div>
       <div id="Book" class="d-none">
+        <p>Please, provide weight:</p>
       <div class="form-group row">
         <label class="col-sm-1 col-form-label">Weight(KG)</label>  
         <div class="col-sm-5">
@@ -69,6 +81,7 @@
       </div>
       </div>
       <div id="Furniture" class="d-none">
+      <p>Please, provide dimensions:</p>
         <div class="form-group row" >
           <label class="col-sm-1 col-form-label">Height</label>  
         <div class="col-sm-5">
